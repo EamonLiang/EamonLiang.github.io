@@ -75,8 +75,55 @@
       </tags>
   </entry>
   <entry>
-    <title>模板二</title>
-    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%BA%8C/</url>
-    <content><![CDATA[]]></content>
+    <title>git操作一</title>
+    <url>/2022/05/18/git%E6%93%8D%E4%BD%9C%E4%B8%80/</url>
+    <content><![CDATA[<h2 id="创建一个Git仓库"><a href="#创建一个Git仓库" class="headerlink" title="创建一个Git仓库"></a>创建一个Git仓库</h2><h3 id="使用当前目录作为Git仓库"><a href="#使用当前目录作为Git仓库" class="headerlink" title="使用当前目录作为Git仓库"></a>使用当前目录作为Git仓库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init </span><br></pre></td></tr></table></figure>
+
+<h3 id="指定目录作为Git仓库"><a href="#指定目录作为Git仓库" class="headerlink" title="指定目录作为Git仓库"></a>指定目录作为Git仓库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init &lt;仓库名&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="往仓库里添加文件"><a href="#往仓库里添加文件" class="headerlink" title="往仓库里添加文件"></a>往仓库里添加文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 添加单个文件</span><br><span class="line">git add &lt;文件名&gt;</span><br><span class="line"># 添加所有文件</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<h2 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本"></a>提交版本</h2><p>add操作是将文件提交到缓冲区，现在需要使用commit命令将文件真正的保存在Git仓库中</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git commit -m &lt;修改说明&gt;</span><br><span class="line">git commit -m &quot;Adding files&quot;</span><br></pre></td></tr></table></figure>
+
+<p>双引号里面是提交版本的修改说明。不使用 -m 会出现编辑器让你写提交信息。</p>
+<p>当往缓冲区add了很多文件，不想每一个文件都提交修改说明时，就使用-a</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -a -m &quot;changed some files&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布版本"><a href="#发布版本" class="headerlink" title="发布版本"></a>发布版本</h2><h3 id="先从服务器克隆一个库"><a href="#先从服务器克隆一个库" class="headerlink" title="先从服务器克隆一个库"></a>先从服务器克隆一个库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git clone &lt;链接&gt;</span><br><span class="line">git clone ssh:</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改后在推送到服务器上"><a href="#修改后在推送到服务器上" class="headerlink" title="修改后在推送到服务器上"></a>修改后在推送到服务器上</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push </span><br></pre></td></tr></table></figure>
+
+<h2 id="取回更新"><a href="#取回更新" class="headerlink" title="取回更新"></a>取回更新</h2><p>当前分支自动与唯一一个追踪分支进行合并</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+<p>从非默认位置更新到指定的url</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull </span><br></pre></td></tr></table></figure>
+
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>从资源库中删除文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="分支与合并"><a href="#分支与合并" class="headerlink" title="分支与合并"></a>分支与合并</h2><h3 id="创建一个新的分支"><a href="#创建一个新的分支" class="headerlink" title="创建一个新的分支"></a>创建一个新的分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git brach &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>branch指令只是创建一个新的分支，需要使用checkout命令切换分支</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>第一个分支，也叫主分支，也叫默认分支。分支名为main</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p>对其他分支的修改不会影响主分支，如果想把其他分支的修改提交到主分支，则需要使用合并merge指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout main</span><br><span class="line"># 把分支名的修改提交到main分支上</span><br><span class="line">git merge &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch -d &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
 </search>
