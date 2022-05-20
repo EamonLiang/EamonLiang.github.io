@@ -1,104 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/05/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>代码一</title>
-    <url>/2022/05/18/%E4%BB%A3%E7%A0%81%E4%B8%80/</url>
+    <title>git操作实例</title>
+    <url>/2022/05/18/git%E6%93%8D%E4%BD%9C%E5%AE%9E%E4%BE%8B/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>代码</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>代码摘要，文本生成</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
-    <title>学习一</title>
-    <url>/2022/05/18/%E5%AD%A6%E4%B9%A0%E4%B8%80/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>nlp模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建个人博客</title>
-    <url>/2022/05/18/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h1>]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>模板一</title>
-    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%B8%80/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>模板三</title>
-    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%B8%89/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>论文一</title>
-    <url>/2022/05/18/%E8%AE%BA%E6%96%87%E4%B8%80/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>论文</category>
-      </categories>
-      <tags>
-        <tag>生物序列，nlp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git操作一</title>
-    <url>/2022/05/18/git%E6%93%8D%E4%BD%9C%E4%B8%80/</url>
+    <title>git操作说明</title>
+    <url>/2022/05/18/git%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/</url>
     <content><![CDATA[<h2 id="创建一个Git仓库"><a href="#创建一个Git仓库" class="headerlink" title="创建一个Git仓库"></a>创建一个Git仓库</h2><h3 id="使用当前目录作为Git仓库"><a href="#使用当前目录作为Git仓库" class="headerlink" title="使用当前目录作为Git仓库"></a>使用当前目录作为Git仓库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init </span><br></pre></td></tr></table></figure>
 
 <h3 id="指定目录作为Git仓库"><a href="#指定目录作为Git仓库" class="headerlink" title="指定目录作为Git仓库"></a>指定目录作为Git仓库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init &lt;仓库名&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="往仓库里添加文件"><a href="#往仓库里添加文件" class="headerlink" title="往仓库里添加文件"></a>往仓库里添加文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 添加单个文件</span><br><span class="line">git add &lt;文件名&gt;</span><br><span class="line"># 添加所有文件</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
+<h2 id="查看仓库状态"><a href="#查看仓库状态" class="headerlink" title="查看仓库状态"></a>查看仓库状态</h2><p>使用git status指令可以查看当前仓库状态，缓冲区内添加的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
 <h2 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本"></a>提交版本</h2><p>add操作是将文件提交到缓冲区，现在需要使用commit命令将文件真正的保存在Git仓库中</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git commit -m &lt;修改说明&gt;</span><br><span class="line">git commit -m &quot;Adding files&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git commit -m &lt;&quot;修改说明&quot;&gt;</span><br><span class="line">git commit -m &quot;Adding files&quot;</span><br></pre></td></tr></table></figure>
 
 <p>双引号里面是提交版本的修改说明。不使用 -m 会出现编辑器让你写提交信息。</p>
 <p>当往缓冲区add了很多文件，不想每一个文件都提交修改说明时，就使用-a</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -a -m &quot;changed some files&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="发布版本"><a href="#发布版本" class="headerlink" title="发布版本"></a>发布版本</h2><h3 id="先从服务器克隆一个库"><a href="#先从服务器克隆一个库" class="headerlink" title="先从服务器克隆一个库"></a>先从服务器克隆一个库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git clone &lt;链接&gt;</span><br><span class="line">git clone ssh:</span><br></pre></td></tr></table></figure>
+<h2 id="发布版本"><a href="#发布版本" class="headerlink" title="发布版本"></a>发布版本</h2><h3 id="先从服务器克隆git库"><a href="#先从服务器克隆git库" class="headerlink" title="先从服务器克隆git库"></a>先从服务器克隆git库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git clone &lt;ssh链接&gt;</span><br><span class="line">git clone </span><br></pre></td></tr></table></figure>
 
-<h3 id="修改后在推送到服务器上"><a href="#修改后在推送到服务器上" class="headerlink" title="修改后在推送到服务器上"></a>修改后在推送到服务器上</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push </span><br></pre></td></tr></table></figure>
+<p>从服务器克隆一个git库。在github上新建一个仓库，复制ssh地址。</p>
+<h3 id="修改后在推送到服务器git库上"><a href="#修改后在推送到服务器git库上" class="headerlink" title="修改后在推送到服务器git库上"></a>修改后在推送到服务器git库上</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># git push &lt;ssh链接&gt;</span><br><span class="line">git push </span><br></pre></td></tr></table></figure>
 
-<h2 id="取回更新"><a href="#取回更新" class="headerlink" title="取回更新"></a>取回更新</h2><p>当前分支自动与唯一一个追踪分支进行合并</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>从非默认位置更新到指定的url</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull </span><br></pre></td></tr></table></figure>
+<p>这样就可以把刚刚本地的git库推送到服务器的git库上了。</p>
+<h2 id="取回更新"><a href="#取回更新" class="headerlink" title="取回更新"></a>取回更新</h2><p>把服务器上的git库推送到本地的git库，也可以理解成把服务器的git库合并到本地git库上。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull &lt;ssh链接&gt; &lt;branch&gt;</span><br><span class="line">&lt;ssh链接&gt;：指服务器上的git库</span><br><span class="line">&lt;branch&gt;：指服务器上的git库的哪个分支</span><br></pre></td></tr></table></figure>
 
 <h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>从资源库中删除文件</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm &lt;文件名&gt;</span><br></pre></td></tr></table></figure>
@@ -124,6 +63,75 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>代码一</title>
+    <url>/2022/05/18/%E4%BB%A3%E7%A0%81%E4%B8%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码摘要，文本生成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建个人博客</title>
+    <url>/2022/05/18/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="创建Github账号"><a href="#创建Github账号" class="headerlink" title="创建Github账号"></a>创建Github账号</h1>]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/05/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习一</title>
+    <url>/2022/05/18/%E5%AD%A6%E4%B9%A0%E4%B8%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>nlp模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模板一</title>
+    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%B8%80/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>论文一</title>
+    <url>/2022/05/18/%E8%AE%BA%E6%96%87%E4%B8%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>论文</category>
+      </categories>
+      <tags>
+        <tag>生物序列，nlp</tag>
       </tags>
   </entry>
 </search>
