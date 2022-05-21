@@ -3,31 +3,36 @@
   <entry>
     <title>git操作实例</title>
     <url>/2022/05/18/git%E6%93%8D%E4%BD%9C%E5%AE%9E%E4%BE%8B/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>本文介绍了本地git库与服务器github上的git库的交互示例。其中包括创建本地git仓库，往本地git仓库添加文件，提交文件到本地仓库，<strong>克隆服务器github上的git库</strong>，<strong>修改后推送到服务器github上的git库中</strong>，根据服务器github上的git库对本地库进行更新<strong>，删除git库中的文件</strong>，<strong>创建分支branch</strong>，<strong>合并分支</strong>，<strong>删除分支</strong>等操作</p>
+<h2 id="1-本地git仓库操作"><a href="#1-本地git仓库操作" class="headerlink" title="1 本地git仓库操作"></a>1 本地git仓库操作</h2><h3 id="创建本地git库"><a href="#创建本地git库" class="headerlink" title="创建本地git库"></a>创建本地git库</h3><p>在当前文件夹下创建一个本地git仓库aRepository，可以看到在当前文件夹下（GitRepository)生成了一个文件夹aRepository。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init aRepository</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204406568.png" alt="image-20220520204406568"></p>
+<h3 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h3><p>打开aRepository可以看到文件夹下有一个.git文件夹（这说明aRepository文件夹是一个git库），在aRepository下新建文件a.txt，文件内容为a（添加内容是为了展示后面的修改操作）。还有b.txt，文件内容为b。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204945411.png" alt="image-20220520204945411"></p>
+<p>将a.txt，b.txt添加到本地git仓库中，首先使用add指令添加到缓冲区中。</p>
+<p>可以一次性添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>也可以分别添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add a.txt</span><br><span class="line">git add b.txt</span><br></pre></td></tr></table></figure>
+
+<p>使用git status 查看缓冲区中有哪些文件，可以看到a.txt和b.txt在缓冲区</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520210904696.png" alt="image-20220520210904696"></p>
+<h3 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本"></a>提交版本</h3><p>使用commit命令，将此次修改版本（其实是往git库中添加了两个文件）添加到git库中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520211714367.png" alt="image-20220520211714367"></p>
+<p>以上就是常用的本地git仓库操作。接下来想把这个本地库上传到远程git库上去（也就是 github）</p>
+<h2 id="本地git库与远程git库的交互"><a href="#本地git库与远程git库的交互" class="headerlink" title="本地git库与远程git库的交互"></a>本地git库与远程git库的交互</h2><h3 id="创建远程git库"><a href="#创建远程git库" class="headerlink" title="创建远程git库"></a>创建远程git库</h3><p>打开github网址，新建一个仓库，仓库名为bRepository。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213350102.png" alt="image-20220520213350102"></p>
+<p>复制仓库的ssh地址（这个需要自己配，和本地的git连上），<img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213710865.png" alt="image-20220520213710865"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213940551.png" alt="image-20220520213940551"></p>
+]]></content>
       <categories>
         <category>工具</category>
       </categories>
       <tags>
         <tag>git</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/05/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>git操作说明</title>
@@ -84,6 +89,35 @@
       </tags>
   </entry>
   <entry>
+    <title>git操作示例</title>
+    <url>/2022/05/21/git%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/05/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>代码一</title>
     <url>/2022/05/18/%E4%BB%A3%E7%A0%81%E4%B8%80/</url>
     <content><![CDATA[]]></content>
@@ -92,6 +126,17 @@
       </categories>
       <tags>
         <tag>代码摘要，文本生成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习一</title>
+    <url>/2022/05/18/%E5%AD%A6%E4%B9%A0%E4%B8%80/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>nlp模型</tag>
       </tags>
   </entry>
   <entry>
@@ -108,15 +153,9 @@
       </tags>
   </entry>
   <entry>
-    <title>学习一</title>
-    <url>/2022/05/18/%E5%AD%A6%E4%B9%A0%E4%B8%80/</url>
+    <title>模板一</title>
+    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%B8%80/</url>
     <content><![CDATA[]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>nlp模型</tag>
-      </tags>
   </entry>
   <entry>
     <title>论文一</title>
@@ -128,10 +167,5 @@
       <tags>
         <tag>生物序列，nlp</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>模板一</title>
-    <url>/2022/05/18/%E6%A8%A1%E6%9D%BF%E4%B8%80/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>

@@ -20,18 +20,26 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="午未无畏">
+  <meta name="description" content="本文介绍了本地git库与服务器github上的git库的交互示例。其中包括创建本地git仓库，往本地git仓库添加文件，提交文件到本地仓库，克隆服务器github上的git库，修改后推送到服务器github上的git库中，根据服务器github上的git库对本地库进行更新，删除git库中的文件，创建分支branch，合并分支，删除分支等操作 1 本地git仓库操作创建本地git库在当前文件夹下创建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git操作实例">
 <meta property="og:url" content="http://example.com/2022/05/18/git%E6%93%8D%E4%BD%9C%E5%AE%9E%E4%BE%8B/index.html">
 <meta property="og:site_name" content="Eamon&#39;s space">
-<meta property="og:description" content="午未无畏">
+<meta property="og:description" content="本文介绍了本地git库与服务器github上的git库的交互示例。其中包括创建本地git仓库，往本地git仓库添加文件，提交文件到本地仓库，克隆服务器github上的git库，修改后推送到服务器github上的git库中，根据服务器github上的git库对本地库进行更新，删除git库中的文件，创建分支branch，合并分支，删除分支等操作 1 本地git仓库操作创建本地git库在当前文件夹下创建">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204406568.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204945411.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520210904696.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520211714367.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213350102.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213710865.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213940551.png">
 <meta property="article:published_time" content="2022-05-18T12:02:58.000Z">
-<meta property="article:modified_time" content="2022-05-19T13:53:58.488Z">
+<meta property="article:modified_time" content="2022-05-20T13:53:46.210Z">
 <meta property="article:author" content="EamonLiang">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204406568.png">
 
 <link rel="canonical" href="http://example.com/2022/05/18/git%E6%93%8D%E4%BD%9C%E5%AE%9E%E4%BE%8B/">
 
@@ -127,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -230,7 +238,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-19 21:53:58" itemprop="dateModified" datetime="2022-05-19T21:53:58+08:00">2022-05-19</time>
+                <time title="Modified: 2022-05-20 21:53:46" itemprop="dateModified" datetime="2022-05-20T21:53:46+08:00">2022-05-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +277,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>0</span>
+              <span>724</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -288,7 +296,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>本文介绍了本地git库与服务器github上的git库的交互示例。其中包括创建本地git仓库，往本地git仓库添加文件，提交文件到本地仓库，<strong>克隆服务器github上的git库</strong>，<strong>修改后推送到服务器github上的git库中</strong>，根据服务器github上的git库对本地库进行更新<strong>，删除git库中的文件</strong>，<strong>创建分支branch</strong>，<strong>合并分支</strong>，<strong>删除分支</strong>等操作</p>
+<h2 id="1-本地git仓库操作"><a href="#1-本地git仓库操作" class="headerlink" title="1 本地git仓库操作"></a>1 本地git仓库操作</h2><h3 id="创建本地git库"><a href="#创建本地git库" class="headerlink" title="创建本地git库"></a>创建本地git库</h3><p>在当前文件夹下创建一个本地git仓库aRepository，可以看到在当前文件夹下（GitRepository)生成了一个文件夹aRepository。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init aRepository</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204406568.png" alt="image-20220520204406568"></p>
+<h3 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h3><p>打开aRepository可以看到文件夹下有一个.git文件夹（这说明aRepository文件夹是一个git库），在aRepository下新建文件a.txt，文件内容为a（添加内容是为了展示后面的修改操作）。还有b.txt，文件内容为b。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520204945411.png" alt="image-20220520204945411"></p>
+<p>将a.txt，b.txt添加到本地git仓库中，首先使用add指令添加到缓冲区中。</p>
+<p>可以一次性添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>也可以分别添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add a.txt</span><br><span class="line">git add b.txt</span><br></pre></td></tr></table></figure>
+
+<p>使用git status 查看缓冲区中有哪些文件，可以看到a.txt和b.txt在缓冲区</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520210904696.png" alt="image-20220520210904696"></p>
+<h3 id="提交版本"><a href="#提交版本" class="headerlink" title="提交版本"></a>提交版本</h3><p>使用commit命令，将此次修改版本（其实是往git库中添加了两个文件）添加到git库中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520211714367.png" alt="image-20220520211714367"></p>
+<p>以上就是常用的本地git仓库操作。接下来想把这个本地库上传到远程git库上去（也就是 github）</p>
+<h2 id="本地git库与远程git库的交互"><a href="#本地git库与远程git库的交互" class="headerlink" title="本地git库与远程git库的交互"></a>本地git库与远程git库的交互</h2><h3 id="创建远程git库"><a href="#创建远程git库" class="headerlink" title="创建远程git库"></a>创建远程git库</h3><p>打开github网址，新建一个仓库，仓库名为bRepository。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213350102.png" alt="image-20220520213350102"></p>
+<p>复制仓库的ssh地址（这个需要自己配，和本地的git连上），<img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213710865.png" alt="image-20220520213710865"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/EamonLiang/picRepository@main/img/image-20220520213940551.png" alt="image-20220520213940551"></p>
+
     </div>
 
     <!-- 文章结束表示语-->
@@ -296,7 +327,7 @@
       
         <div>
     
-        <div style="text-align:center;color: #000;font-size:14px;">----------本文结束<i class="fa fa-heart"; style= "color: #ff0000"></i>感谢您的阅读----------</div>
+        <div style="text-align:center;color: #ccc;font-size:14px;">----------本文结束<i class="fa fa-heart"; style= "color: #ff0000"></i>感谢您的阅读----------</div>
     
 </div>
 
@@ -322,7 +353,10 @@
     <a href="/2022/05/18/git%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/" rel="prev" title="git操作说明">
       <i class="fa fa-chevron-left"></i> git操作说明
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/21/git%E6%93%8D%E4%BD%9C%E7%A4%BA%E4%BE%8B/" rel="next" title="git操作示例">
+      git操作示例 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -382,6 +416,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9C%AC%E5%9C%B0git%E4%BB%93%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">1 本地git仓库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0git%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">创建本地git库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">添加文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E7%89%88%E6%9C%AC"><span class="nav-number">1.3.</span> <span class="nav-text">提交版本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0git%E5%BA%93%E4%B8%8E%E8%BF%9C%E7%A8%8Bgit%E5%BA%93%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="nav-number">2.</span> <span class="nav-text">本地git库与远程git库的交互</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8Bgit%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">创建远程git库</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -397,7 +432,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -455,13 +490,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">1k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">1 mins.</span>
+    <span title="Reading time total">2 mins.</span>
 </div>
 
         
