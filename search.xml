@@ -25,7 +25,7 @@
 </li>
 </ol>
 <p>为了避免冗余描述，本文不强调操作所在的文件目录，以下操作请注意操作所在的文件目录。</p>
-<h3 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h3><p>连接远程仓库有两种方式。一是首先在本地创建git仓库，然后连接到远程仓库。二是直接从远程仓库克隆到本地仓库。</p>
+<h3 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h3><p>连接远程仓库有两种方式。一是首先在本地创建git仓库，然后连接到远程仓库。二是直接从远程仓库克隆到本地仓库。个人推荐第二种。此外请不要直接在github上进行文件的修改操作，尽量在本地仓库修改再同步到远程仓库，否则会出现本地仓库修改之后同步远程仓库冲突。</p>
 <h4 id="创建本地仓库，然后连接到远程仓库"><a href="#创建本地仓库，然后连接到远程仓库" class="headerlink" title="创建本地仓库，然后连接到远程仓库"></a>创建本地仓库，然后连接到远程仓库</h4><p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202205261658985.png" alt="20220525111003263"></p>
 <p>在github上创建一个远程仓库，github.com –&gt; 头像 –&gt; Your repositories –&gt;点击New按钮 创建一个git仓库。repository name处填repOne，点击create repository按钮，创建仓库。</p>
 <p>在出现的仓库页面点击code按钮，复制SSH链接，通过remote指令将本地仓库与远程仓库链接。</p>
@@ -53,6 +53,7 @@
 <h4 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h4><p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202205262015934.png" alt="image-20220526201515907"></p>
 <h4 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h4><p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202205262019050.png" alt="image-20220526201911999"></p>
 <h4 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h4><p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202205262022791.png" alt="image-20220526202232761"></p>
+<h3 id="和远端仓库保持同步"><a href="#和远端仓库保持同步" class="headerlink" title="和远端仓库保持同步"></a>和远端仓库保持同步</h3><p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202205262107341.png" alt="image-20220526210707305"></p>
 ]]></content>
       <categories>
         <category>工具</category>
@@ -164,39 +165,6 @@
       </categories>
       <tags>
         <tag>生物序列，nlp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git</title>
-    <url>/2022/05/18/git/</url>
-    <content><![CDATA[<p>git是一个版本控制系统，其中每个版本库叫做一个git仓库(repository)，每个仓库都可以简单理解成一个目录(存放好多版本的目录)。Git能够跟踪并记录在该目录中所有文件的更新，包括文件修改操作和文件删除操作，方便用户追踪和还原文件的历史版本。</p>
-<p>对于个人操作，git可以实现以下功能：</p>
-<ol>
-<li><p>连接远程仓库、将本地仓库的版本上传到远程仓库、或者从远程仓库更新本地仓库。</p>
-</li>
-<li><p>在本地git仓库进行文件上的操作，包括文件的修改和删除操作。</p>
-</li>
-<li><p>查看历史版本，比较历史版本与现在版本的不同（或者说历史版本和现在版本之间进行了哪些文件的操作）</p>
-</li>
-<li><p>回退到历史版本，并在历史版本上进行修改。</p>
-</li>
-<li><p>创建分支、合并分支、删除分支</p>
-</li>
-</ol>
-<p>对于团队协作，在掌握以上操作的基础上，还需要明白以下几点：</p>
-<ol>
-<li>熟悉常用的工作流</li>
-<li>知道如何解决冲突</li>
-</ol>
-<p>为了避免冗余描述，本文不强调操作所在的文件目录，以下操作请注意操作所在的文件目录。</p>
-<h3 id="连接远程仓库"><a href="#连接远程仓库" class="headerlink" title="连接远程仓库"></a>连接远程仓库</h3><p>连接远程仓库有两种方式。一是首先在本地创建git仓库，然后连接到远程仓库。二是直接从远程仓库克隆到本地仓库。</p>
-<h4 id="创建本地仓库，然后连接到远程仓库"><a href="#创建本地仓库，然后连接到远程仓库" class="headerlink" title="创建本地仓库，然后连接到远程仓库"></a>创建本地仓库，然后连接到远程仓库</h4><p><img src="https://gitee.com/EamonLiang/picrepository/raw/main/202205261525221.png" alt="20220525111003263"></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
 </search>
