@@ -167,4 +167,33 @@
         <tag>生物序列，nlp</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git其他命令</title>
+    <url>/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h3 id="删除暂存区文件"><a href="#删除暂存区文件" class="headerlink" title="删除暂存区文件"></a>删除暂存区文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm --cached （文件路径）只删除暂存区文件</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路径遍历</title>
+    <url>/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/</url>
+    <content><![CDATA[<h3 id="2-2-练习题"><a href="#2-2-练习题" class="headerlink" title="2.2 练习题"></a>2.2 练习题</h3><p>找出从开始结点到终端结点的所有路径。</p>
+<p>终端结点是指 1.叶子结点， 或 2.一些特殊条件的点(比如return结点)</p>
+<p>比如： 找出从3为开始结点的所有路径。遇到环停止，遇到return结点停止（此处return结点是8,11），遇到叶子结点停止</p>
+<p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202206081622467.jpg" alt="2ControlGraphPicture"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import copy</span><br><span class="line">graph = &#123;</span><br><span class="line">    &#x27;3&#x27;:[&#x27;4&#x27;],</span><br><span class="line">    &#x27;4&#x27;:[&#x27;5&#x27;],</span><br><span class="line">    &#x27;5&#x27;:[&#x27;6&#x27;, &#x27;11&#x27;],</span><br><span class="line">    &#x27;6&#x27;:[&#x27;7&#x27;],</span><br><span class="line">    &#x27;7&#x27;:[&#x27;8&#x27;,&#x27;9&#x27;],</span><br><span class="line">    &#x27;8&#x27;:[&#x27;9&#x27;],</span><br><span class="line">    &#x27;9&#x27;:[&#x27;5&#x27;,&#x27;10&#x27;]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def find_path_all(start, path):</span><br><span class="line">    if start == &#x27;8&#x27; or start == &#x27;11&#x27;:</span><br><span class="line">        path_tmp = copy.deepcopy(path)</span><br><span class="line">        path_all.append(path_tmp)</span><br><span class="line">        return </span><br><span class="line">    if not graph.get(start):</span><br><span class="line">        path_tmp = copy.deepcopy(path)</span><br><span class="line">        path_all.append(path_tmp)</span><br><span class="line">        return</span><br><span class="line">    for v in graph[start]:</span><br><span class="line">        if v in path:</span><br><span class="line">            print(&quot;v %s in path %s&quot; %(v, path))</span><br><span class="line">            path_temp = copy.deepcopy(path)</span><br><span class="line">            path_all.append(path_temp)</span><br><span class="line">            continue</span><br><span class="line">        path.append(v)</span><br><span class="line">        find_path_all(v, path)</span><br><span class="line">        path.pop()</span><br><span class="line"></span><br><span class="line">path_all = []</span><br><span class="line">find_path_all(&#x27;3&#x27;,path=[&#x27;3&#x27;])</span><br><span class="line">print(path_all)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">结果:</span><br><span class="line">v 5 in path [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;] </span><br><span class="line"></span><br><span class="line">[[&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;, &#x27;10&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;11&#x27;]]</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
 </search>

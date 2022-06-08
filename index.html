@@ -124,7 +124,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -192,6 +192,246 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="EamonLiang">
+      <meta itemprop="description" content="午未无畏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eamon's space">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">路径遍历</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-08 15:54:13 / Modified: 16:23:51" itemprop="dateCreated datePublished" datetime="2022-06-08T15:54:13+08:00">2022-06-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/" class="post-meta-item leancloud_visitors" data-flag-title="路径遍历" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="2-2-练习题"><a href="#2-2-练习题" class="headerlink" title="2.2 练习题"></a>2.2 练习题</h3><p>找出从开始结点到终端结点的所有路径。</p>
+<p>终端结点是指 1.叶子结点， 或 2.一些特殊条件的点(比如return结点)</p>
+<p>比如： 找出从3为开始结点的所有路径。遇到环停止，遇到return结点停止（此处return结点是8,11），遇到叶子结点停止</p>
+<p><img src="https://raw.githubusercontent.com/EamonLiang/picRepository/main/images/202206081622467.jpg" alt="2ControlGraphPicture"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import copy</span><br><span class="line">graph = &#123;</span><br><span class="line">    &#x27;3&#x27;:[&#x27;4&#x27;],</span><br><span class="line">    &#x27;4&#x27;:[&#x27;5&#x27;],</span><br><span class="line">    &#x27;5&#x27;:[&#x27;6&#x27;, &#x27;11&#x27;],</span><br><span class="line">    &#x27;6&#x27;:[&#x27;7&#x27;],</span><br><span class="line">    &#x27;7&#x27;:[&#x27;8&#x27;,&#x27;9&#x27;],</span><br><span class="line">    &#x27;8&#x27;:[&#x27;9&#x27;],</span><br><span class="line">    &#x27;9&#x27;:[&#x27;5&#x27;,&#x27;10&#x27;]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">def find_path_all(start, path):</span><br><span class="line">    if start == &#x27;8&#x27; or start == &#x27;11&#x27;:</span><br><span class="line">        path_tmp = copy.deepcopy(path)</span><br><span class="line">        path_all.append(path_tmp)</span><br><span class="line">        return </span><br><span class="line">    if not graph.get(start):</span><br><span class="line">        path_tmp = copy.deepcopy(path)</span><br><span class="line">        path_all.append(path_tmp)</span><br><span class="line">        return</span><br><span class="line">    for v in graph[start]:</span><br><span class="line">        if v in path:</span><br><span class="line">            print(&quot;v %s in path %s&quot; %(v, path))</span><br><span class="line">            path_temp = copy.deepcopy(path)</span><br><span class="line">            path_all.append(path_temp)</span><br><span class="line">            continue</span><br><span class="line">        path.append(v)</span><br><span class="line">        find_path_all(v, path)</span><br><span class="line">        path.pop()</span><br><span class="line"></span><br><span class="line">path_all = []</span><br><span class="line">find_path_all(&#x27;3&#x27;,path=[&#x27;3&#x27;])</span><br><span class="line">print(path_all)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结果:</span><br><span class="line">v 5 in path [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;] </span><br><span class="line"></span><br><span class="line">[[&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;8&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;6&#x27;, &#x27;7&#x27;, &#x27;9&#x27;, &#x27;10&#x27;], [&#x27;3&#x27;, &#x27;4&#x27;, &#x27;5&#x27;, &#x27;11&#x27;]]</span><br></pre></td></tr></table></figure>
+
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/08/%E8%B7%AF%E5%BE%84%E9%81%8D%E5%8E%86/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <!-- 文章结束表示语-->
+    <div>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="EamonLiang">
+      <meta itemprop="description" content="午未无畏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eamon's space">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">git其他命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-04 13:47:02 / Modified: 16:51:51" itemprop="dateCreated datePublished" datetime="2022-06-04T13:47:02+08:00">2022-06-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/" class="post-meta-item leancloud_visitors" data-flag-title="git其他命令" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>35</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="删除暂存区文件"><a href="#删除暂存区文件" class="headerlink" title="删除暂存区文件"></a>删除暂存区文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached （文件路径）只删除暂存区文件</span><br></pre></td></tr></table></figure>
+
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/04/git%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <!-- 文章结束表示语-->
+    <div>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1065,7 +1305,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1123,13 +1363,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">2k</span>
+    <span title="Symbols count total">4k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">2 mins.</span>
+    <span title="Reading time total">4 mins.</span>
 </div>
 
         
